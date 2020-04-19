@@ -9,6 +9,7 @@ def call(body) {
     agent any
         environment {
             COMPUTERNAME = 'MacBook Air'
+        }
     stages {
         stage('test1') {
             steps{
