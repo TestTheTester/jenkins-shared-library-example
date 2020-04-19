@@ -7,6 +7,8 @@ def call(body) {
 
     pipeline {
     agent any
+        environment {
+            COMPUTERNAME = 'MacBook Air'
     stages {
         stage('test1') {
             steps{
