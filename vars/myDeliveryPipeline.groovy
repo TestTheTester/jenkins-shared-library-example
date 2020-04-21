@@ -1,3 +1,5 @@
+import com.mybuilder.Constants
+
 def call(body) {
     // evaluate the body block, and collect configuration into the object
     def pipelineParams= [:]
@@ -9,11 +11,13 @@ def call(body) {
     agent any
         environment {
             COMPUTERNAME = 'MacBook Air'
+            tester = "${Constants.SLACK_MESSAGE}"
         }
     stages {
         stage('test1') {
             steps{
                 echo "Build number is ${env.BUILD_NUMBER}"
+                echo $tester
                 script {
                     currentBuild.description = pipelineParams.build_description
                     currentBuild.displayName = pipelineParams.displayName
