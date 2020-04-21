@@ -13,8 +13,8 @@ def call(body) {
             COMPUTERNAME = 'MacBook Air'
             tester = "${Constants.SLACK_MESSAGE}"
         }
-        script{
-            parameters()
+        parameters {
+            parameters()   
         }
     stages {
         stage('test1') {
