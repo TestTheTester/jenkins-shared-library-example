@@ -17,7 +17,7 @@ def call(body) {
         stage('test1') {
             steps{
                 echo "Build number is ${env.BUILD_NUMBER}"
-                echo $tester
+                echo "$tester"
                 script {
                     currentBuild.description = pipelineParams.build_description
                     currentBuild.displayName = pipelineParams.displayName
