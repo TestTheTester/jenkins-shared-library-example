@@ -14,7 +14,7 @@ def call(body) {
             tester = "${Constants.SLACK_MESSAGE}"
         }
         parameters {
-            parameters()   
+            choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '')   
         }
     stages {
         stage('test1') {
@@ -31,6 +31,7 @@ def call(body) {
                 script {
                     logs.info 'Starting'
                     logs.warning 'Nothing to do!'
+                    logs.info '$CHOICES'
                 }
             }
         }
