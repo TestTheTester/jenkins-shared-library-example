@@ -31,7 +31,7 @@ def call(body) {
                 script {
                     logs.info 'Starting'
                     logs.warning 'Nothing to do!'
-                    logs.info '$CHOICES'
+                    logs.info "$CHOICES"
                 }
             }
         }
