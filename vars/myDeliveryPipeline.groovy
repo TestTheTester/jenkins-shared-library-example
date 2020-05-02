@@ -33,7 +33,6 @@ def call(body) {
                     logs.info 'Starting'
                     logs.warning 'Nothing to do!'
                     logs.info "$CHOICES"
-                    logs.info "${Constants.REF_VAR}"
                 }
             }
         }
