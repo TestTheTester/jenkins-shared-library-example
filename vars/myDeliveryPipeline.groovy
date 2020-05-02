@@ -14,7 +14,8 @@ def call(body) {
             tester = "${Constants.SLACK_MESSAGE}"
         }
         parameters {
-            choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '')   
+            choice(name: 'CHOICES', choices: ['one', 'two', 'three'], description: '')
+            booleanParam(name: 'DEBUG_BUILD', defaultValue: true, description: '')
         }
     stages {
         stage('test1') {
