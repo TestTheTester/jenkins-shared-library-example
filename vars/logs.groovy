@@ -12,4 +12,10 @@ def warning(message) {
     } else {
         echo "work anyways"
     }
+    
+    if (env.CHOICES == "one") {
+        echo "this is one"
+    } else {
+        echo "not sure"
+    }
 }
