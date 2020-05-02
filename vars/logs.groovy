@@ -6,4 +6,5 @@ def info(message) {
 
 def warning(message) {
     echo "WARNING: ${message}"
+    echo env.DEBUG_BUILD
 }
