@@ -7,7 +7,7 @@ def info(message) {
 def warning(message) {
     echo "WARNING: ${message}"
     echo env.DEBUG_BUILD
-    if (env.DEBUG_BUILD == true) {
+    if (env.DEBUG_BUILD) {
         echo "it is working"
     } else {
         echo "work anyways"
