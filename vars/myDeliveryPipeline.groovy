@@ -33,6 +33,7 @@ def call(body) {
                     logs.info 'Starting'
                     logs.warning 'Nothing to do!'
                     logs.info "$CHOICES"
+                    logs.warning "$DEBUG_BUILD"
                 }
             }
         }
